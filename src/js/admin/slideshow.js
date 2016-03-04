@@ -126,15 +126,15 @@ jQuery(function() {
                         $(".close").click();
 
                         var s="";
-                        s+='<tr class="odd gradeX" tr-id="'+id+'">'
-                        s+='    <td><img class="img" src="'+v2+'"></td>'
-                        s+='   <td ><span class="link">'+v1+'</span> </td>'
-                        s+='    <td>'
-                        s+='    <div class="btns" >'
-                        s+='    <button data-id="'+id+'" class="btn red btn-sm delbtn ">删除</button>'
-                        s+='    </div>'
-                        s+='    </td>'
-                        s+='    </tr>'
+                        s+='<tr class="odd gradeX" tr-id="'+id+'">';
+                        s+='    <td><img class="img" src="'+v2+'"></td>';
+                        s+='   <td ><span class="link">'+v1+'</span> </td>';
+                        s+='    <td>';
+                        s+='    <div class="btns" >';
+                        s+='    <button data-id="'+id+'" class="btn red btn-sm delbtn ">删除</button>';
+                        s+='    </div>';
+                        s+='    </td>';
+                        s+='    </tr>';
                         $("tbody").append(s);
                         $(".delbtn").click(function(){
                             var id=$(this).attr("data-id");

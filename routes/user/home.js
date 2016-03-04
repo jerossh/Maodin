@@ -37,7 +37,7 @@ module.exports = (router) => {
                     $gt:i
                 }
             }
-        })
+        });
 
         this.body = yield render('phone/personalcenter.html', {
             //user: yield auth.user(this),

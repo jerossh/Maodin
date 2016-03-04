@@ -16,7 +16,7 @@ window.show  = function show(index){
         document.getElementById("firsthidden").className="form-group hidden";
         document.getElementsByName("topid").value=3;
     }
-}
+};
 
 var $ = jQuery;
 

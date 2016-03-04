@@ -94,7 +94,7 @@ $(function () {
 
         scope.$watch('type', function (newVal, oldVal) {
             if (typeof newVal == 'undefined' || newVal === oldVal) {
-                return;
+
             }
         });
 

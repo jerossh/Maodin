@@ -67,14 +67,14 @@ $form.each(function(){
             var id=$(form).find(".inputitem").eq(0).val();
             var s=$(form).find(".inputitem").eq(1).val();
             var text=$(form).find(".inputitem").eq(2).val();
-            var a=new Object();
+            var a={};
             a.id=id;
             a.s=s;
             a.text=text;
             list.push(a);
         }
     });
-})
+});
 
 
 
@@ -82,7 +82,7 @@ $("#sub").click(function(){
     list=[];
     $form.each(function(){
         $(this).submit();
-    })
+    });
     if(list.length==$('form').length)
     {
         $.each(list,function(i,v){
@@ -120,7 +120,7 @@ $(".pjbtn").click(function(){
 
 
 
-})
+});
 
 
 

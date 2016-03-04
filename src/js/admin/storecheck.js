@@ -17,7 +17,7 @@ $(".group-checkable").click(function(){
     }
 
 
-})
+});
 
 $("#btn1").click(function(){
     var has=$(".group-checkable").parent().hasClass("checked");
@@ -29,7 +29,7 @@ $("#btn1").click(function(){
         $(".checkboxes").prop("checked","checked");
     }
 
-})
+});
 
 $("#focus").focusout(function(){
     var page=$("#page").val();
@@ -45,7 +45,7 @@ $("#focus").focusout(function(){
 
 
 
-})
+});
 
 
 $("#btn2").click(function(){
@@ -56,10 +56,10 @@ $("#btn2").click(function(){
         {
             var tid=$(this).attr("data-id");
             list.push(tid);}
-    })
+    });
     var val=1;
     manychange(list,val);
-})
+});
 $("#btn3").click(function(){
     var obj=$(".many");
     var list=[];
@@ -68,10 +68,10 @@ $("#btn3").click(function(){
         {
             var tid=$(this).attr("data-id");
             list.push(tid);}
-    })
+    });
     var val=-1;
     manychange(list,val);
-})
+});
 
 function manychange(list,s) {
     $.ajax({

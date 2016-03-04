@@ -19,7 +19,7 @@ $(".group-checkable").click(function(){
     }
 
 
-})
+});
 
 $("#btn1").click(function(){
     var has=$(".group-checkable").parent().hasClass("checked");
@@ -31,7 +31,7 @@ $("#btn1").click(function(){
         $(".checkboxes").prop("checked","checked");
     }
 
-})
+});
 
 $("#focus").focusout(function(){
     var page=$("#page").val();
@@ -47,7 +47,7 @@ $("#focus").focusout(function(){
 
 
 
-})
+});
 
 $("#btn2").click(function(){
     var obj=$(".many");
@@ -57,10 +57,10 @@ $("#btn2").click(function(){
         {
             var tid=$(this).attr("data-id");
             list.push(tid);}
-    })
+    });
     var val=1;
     manychange(list,val);
-})
+});
 $("#btn3").click(function(){
     var obj=$(".many");
     var list=[];
@@ -69,10 +69,10 @@ $("#btn3").click(function(){
         {
             var tid=$(this).attr("data-id");
             list.push(tid);}
-    })
+    });
     var val=0;
     manychange(list,val);
-})
+});
 $("table").click(function(e){
 
     var v=$(e.toElement).attr("value");
@@ -89,10 +89,10 @@ $("table").click(function(e){
             } ,
             success: function(){
                 if(s==1){
-                    $(e.toElement).parent().html('<a data-id="'+id+'" type="button" value="0" class="btn  btn-sm refuse ">关闭</a>')
+                    $(e.toElement).parent().html('<a data-id="'+id+'" type="button" value="0" class="btn  btn-sm refuse ">关闭</a>');
                     $("tr[data-id='"+id+"']").find(".status").html("已开启")
                 }else{
-                    $(e.toElement).parent().html('<a data-id="'+id+'" type="button" value="1" class="btn  btn-sm pass ">开启</a>')
+                    $(e.toElement).parent().html('<a data-id="'+id+'" type="button" value="1" class="btn  btn-sm pass ">开启</a>');
                     $("tr[data-id='"+id+"']").find(".status").html("已关闭")
 
                 }
@@ -119,7 +119,7 @@ $("table").click(function(e){
         $("#name").val(  $("tr[data-id='"+id+"']").find(".usernametd").html());
         $("#phone").val( $("tr[data-id='"+id+"']").find(".phonetd").html());
     }
-})
+});
 
 function manychange(list,s) {
     $.ajax({
@@ -135,10 +135,10 @@ function manychange(list,s) {
             var ano=(s+1)%2;
             $.each(list,function(i,v){
                 if(s==1){
-                    $("tr[data-id='"+v+"']").find(".oc").html('<a data-id="'+v+'" type="button" value="0" class="btn  btn-sm refuse ">关闭</a>')
+                    $("tr[data-id='"+v+"']").find(".oc").html('<a data-id="'+v+'" type="button" value="0" class="btn  btn-sm refuse ">关闭</a>');
                     $("tr[data-id='"+v+"']").find(".status").html("已开启")
                 }else{
-                    $("tr[data-id='"+v+"']").find(".oc").html('<a data-id="'+v+'" type="button" value="1" class="btn  btn-sm pass ">开启</a>')
+                    $("tr[data-id='"+v+"']").find(".oc").html('<a data-id="'+v+'" type="button" value="1" class="btn  btn-sm pass ">开启</a>');
                     $("tr[data-id='"+v+"']").find(".status").html("已关闭")
                 }
             })
@@ -177,7 +177,7 @@ function changeURLPar(destiny, par, par_value)
 
 jQuery.validator.addMethod("mobile", function(value, element) {
     var length = value.length;
-    var mobile = /^1[3-8]+\d{9}$/
+    var mobile = /^1[3-8]+\d{9}$/;
     return this.optional(element) || (length == 11 && mobile.test(value));
 }, "手机号码格式错误");
 
@@ -246,7 +246,7 @@ $form.validate({
             } ,
 
             success: function(){
-                $("tr[data-id='"+id+"']").find(".usernametd").html(username)
+                $("tr[data-id='"+id+"']").find(".usernametd").html(username);
                  $("tr[data-id='"+id+"']").find(".phonetd").html(phone)
             } ,
             dataType: "json"
@@ -259,5 +259,5 @@ $("#searchbtn").click(function(){
     var key=$("#key").val();
     var newurl=changeURLPar( window.location.href,"key",key);
     location.href=newurl;
-})
+});
 

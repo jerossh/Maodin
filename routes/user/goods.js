@@ -133,7 +133,7 @@ module.exports = (router) => {
         }
 
         if (!goods || goods.status !== 1) {
-            this.redirect(encodeURI('/user-msg/抱歉，商品已下架'))
+            this.redirect(encodeURI('/user-msg/抱歉，商品已下架'));
             return;
         }
 
